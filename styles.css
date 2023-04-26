@@ -1,4 +1,5 @@
 html, body {
+    border: 0;
     margin: 0;
     padding: 0;
 }
@@ -7,9 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Times New Roman', Times, serif;
-    min-width: 1300px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 ul {
@@ -24,7 +24,6 @@ a {
 button {
     padding: 8px 30px;
     background-color: #3882F6;
-    margin-top: 20px;
     border-radius: 8px;
     border:none;
     color: #F9FAF8;
@@ -33,27 +32,36 @@ button {
     align-items: center;
 }
 
+.header button {
+    margin-top: 20px;
+}
+
 .header {
     display: flex;
     flex-direction: column;
     background-color: #1F2937;
     gap: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .header-top {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 10px 20px;
-    gap: 800px
+    width: 100%;
 }
 
 .header-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 150px;
     margin: 10px 20px;
+    flex: 1;
+    min-width: 0;
 }
 
 .header-left {
@@ -84,17 +92,20 @@ button {
 }
 
 .header img {
-    width: 800px;
+    width: 600px;
     height: auto;
+    flex-shrink: 1;
+    flex-basis: 0;
 }
 
 .center {
     display: flex;
     flex-direction: column;
+    gap: 50px;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    margin: 50px;
-    gap: 50px;
+    padding: 50px;
 }
 
 .center-images {
@@ -125,4 +136,67 @@ button {
     height: auto;
     border: solid 4px #1F2937;
     border-radius: 8px;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.quote-text {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    color: #1F2937;
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+}
+
+.author {
+    margin-top: 0;
+    width: 750px;
+    text-align: end;
+    padding-right: 25px;
+}
+
+.call {
+    display: flex;
+    background-color: #3882F6;
+    align-items: center;
+    border-radius: 8px;
+    margin: 100px;
+    gap: 150px;
+    padding: 25px 100px;
+}
+
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    color: #F9FAF8;
+}
+
+.call-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.call button {
+    border: solid white 2px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.footer {
+    background-color: #1F2937;
+    display: flex;
+    width: 100%;
+    color: #e5e7eb;
+    justify-content: center;
+    padding: 25px;
 }
